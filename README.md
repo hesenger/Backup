@@ -10,6 +10,16 @@ Para que seja executado periodicamente a aplicação pode ser agendada
 utilizando-se a agenda padrão do Windows.
 
 
+Instalação
+----------
+
+Para instalação basta [descompactar o arquivo](https://github.com/downloads/hesenger/Backup/Backup.zip)
+e seguir os passos da configuração. Após configurado o aplicativo
+pode ser executado através do arquivo `Backup.App.exe`. O agendamento
+para execução automátiva periódica pode ser feita apontando-se para
+este mesmo executável.
+
+
 Configuração
 ------------
 
