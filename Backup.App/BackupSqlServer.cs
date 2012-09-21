@@ -20,7 +20,8 @@ namespace Backup.App
         
         public string RealizarBackup()
         {
-            const string template = "BACKUP DATABASE [{0}] " +
+            const string template = "DBCC SHRINKDATABASE(N'{0}') GO\n" +
+                                    "BACKUP DATABASE [{0}] " +
                                    "TO DISK = N'{1}' " +
                                    "WITH NOFORMAT, NOINIT, SKIP, NAME = N'{0} - {2:dd/MM/yyyy hh:mm}'";
             
