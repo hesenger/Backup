@@ -20,10 +20,10 @@ namespace Backup.App
         
         public string RealizarBackup()
         {
-            const string template = "DBCC SHRINKDATABASE(N'{0}') GO\n" +
+            const string template = "DBCC SHRINKDATABASE(N'{0}');\n" +
                                     "BACKUP DATABASE [{0}] " +
                                    "TO DISK = N'{1}' " +
-                                   "WITH NOFORMAT, NOINIT, SKIP, NAME = N'{0} - {2:dd/MM/yyyy hh:mm}'";
+                                   "WITH NOFORMAT, NOINIT, SKIP, NAME = N'{0} - {2:dd/MM/yyyy hh:mm}';";
             
             var now = DateTime.Now;
             using (var connection = new SqlConnection(_connectionString))

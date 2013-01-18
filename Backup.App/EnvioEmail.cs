@@ -32,8 +32,9 @@ namespace Backup.App
             {
                 _client.SendEmail(req);
             }
-            catch
+            catch(Exception ex)
             {
+                Console.Out.Write(_log.ToString());
             }
         }
     }

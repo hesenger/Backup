@@ -26,6 +26,8 @@ namespace Backup.App
 
                 foreach (ConnectionStringSettings str in ConfigurationManager.ConnectionStrings)
                 {
+                    new CheckSqlServer(log, str.ConnectionString).RealizarCheck();
+
                     var arquivo = new BackupSqlServer(log,
                                                       str.ConnectionString,
                                                       ConfigurationManager.AppSettings[local])
@@ -37,6 +39,8 @@ namespace Backup.App
                                 ConfigurationManager.AppSettings[secretKey],
                                 ConfigurationManager.AppSettings[bucketName])
                         .Enviar(true);
+                    
+                    log.AppendLine();
                 }
 
                 log.AppendFormat("Backup finalizado com sucesso {0:dd\\/MM\\/yyy hh\\:mm\\:ss}\n", DateTime.Now);

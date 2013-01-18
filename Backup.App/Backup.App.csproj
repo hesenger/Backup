@@ -35,10 +35,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AWSSDK">
-      <HintPath>..\..\..\References\Amazon\AWSSDK.dll</HintPath>
-    </Reference>
-    <Reference Include="log4net">
-      <HintPath>..\..\..\References\Log4Net\log4net.dll</HintPath>
+      <HintPath>..\packages\AWSSDK.1.5.10.0\lib\AWSSDK.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -51,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BackupSqlServer.cs" />
+    <Compile Include="CheckSqlServer.cs" />
     <Compile Include="EnvioEmail.cs" />
     <Compile Include="EnvioS3.cs" />
     <Compile Include="Program.cs" />
@@ -60,6 +58,7 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
