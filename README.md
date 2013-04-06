@@ -4,7 +4,7 @@
 Aplicação que faz backup de bases de dados Sql Server e as envia
 para o Amazon S3 e envia o log das operações realizadas aos e-mails
 listados na configuração. O envio dos e-mails é feito através do
-Amazon SES. Mais informações estão [disponíveis em meu blog](http://pensopouco.com/2012/08/backup-sql-server-e-envio-ao-s3/).
+Amazon SES.
 
 Para que seja executado periodicamente a aplicação pode ser agendada
 utilizando-se a agenda padrão do Windows.
